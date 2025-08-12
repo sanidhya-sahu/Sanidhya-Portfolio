@@ -1,0 +1,107 @@
+@font-face {
+    font-family: "thunder";
+    src: url(../../assets/Fonts/Thunder-ExtraBoldLC.otf);
+}
+
+@font-face {
+    font-family: "thunder-i";
+    src: url(../../assets/Fonts/Thunder-ExtraBoldLCItalic.otf);
+}
+
+@font-face {
+    font-family: "thunder-light";
+    src: url(../../assets/Fonts/Thunder-BoldLC.otf);
+}
+
+@font-face {
+    font-family: "thunder-big";
+    src: url(../../assets/Fonts/Thunder-BlackLC.otf);
+}
+
+@font-face {
+    font-family: "thunder-thin";
+    src: url(../../assets/Fonts/Thunder-ThinLC.otf);
+}
+
+.HomeMain {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--light-bg);
+}
+
+.name {
+    font-size: 18vw;
+    font-family: "thunder-big";
+    color: var(--grey-text);
+    padding-left: 50px;
+    padding-top: 35px;
+    margin: 0px;
+}
+
+.name>span {
+    display: inline-block;
+    height: 13vw;
+}
+
+.homeBox {
+    padding-left: 50px;
+    padding-right: 50px;
+    height: 50vh;
+    display: flex;
+    gap: 20px;
+}
+
+.arrowSVG {
+    width: 50px;
+}
+
+.subBox1 {
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    /* gap: 25px; */
+}
+
+.about {
+    font-size: 30px;
+    font-family: "thunder-light";
+    color: var(--light-grey-text);
+    word-spacing: 2px;
+    line-height: 35px;
+    padding-left: 50px;
+}
+
+.about>span {
+    font-size: 20px;
+    font-family: "thunder-thin";
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.HomeContact {
+    padding-left: 50px;
+}
+
+.HomeContact>button {
+    font-family: "thunder-light";
+    background-color: var(--brown-bg);
+    color: var(--light-bg);
+    border: 2px solid var(--brown-bg);
+    border-radius: 30px;
+    height: 60px;
+    width: 145px;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 4px;
+    cursor: none;
+    letter-spacing: 1px;
+    margin-top: 25px;
+}
+
+.subBox2 {
+    width: 30vw;
+}
+
+.subBox3 {
+    width: 30vw;
+}

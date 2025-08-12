@@ -1,0 +1,38 @@
+.headerMain{
+    background-color: var(--light-bg);
+    /* width: calc(100vw-100px); */
+    height: 10vh;
+    display: flex;
+    padding-left: 50px;
+    padding-right: 50px;
+    justify-content: space-between;
+}
+
+.pos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--light-grey-text);
+    font-family: "thunder-light";
+    font-size: 20px;
+    word-spacing: 3px;
+}
+.headerContact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.headerContact > button{
+    font-family: "thunder-light";
+    background-color: var(--light-bg);
+    color: var(--light-grey-text);
+    border: 2px solid var(--light-grey-text);
+    border-radius: 10px;
+    height: 30px;
+    width: 80px;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 4px;
+    cursor: none;
+}
+

@@ -1,0 +1,51 @@
+.Page2Main {
+    width: 99vw;
+    background-color: var(--darkBrown-bg);
+    height: 70vh;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 35px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sec1 {
+    height: 50%;
+}
+
+.whatIdo {
+    font-family: 'thunder';
+    color: var(--light-bg);
+    font-size: 11vw;
+    padding-top: 70px;
+    padding-left: 50px;
+}
+
+.whatIdo>span {
+    font-family: "thunder-i";
+}
+
+.sec2 {
+    height: 50%;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.para {
+    width: 30%;
+    font-size: 29px;
+    font-family: "thunder-thin";
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: var(--light-grey-text);
+    padding-right: 140px;
+    line-height: 30px;
+    word-spacing: 10px;
+}
+
+.serv {
+    padding-right: 60px;
+    font-size: 20px;
+    font-family: "thunder-thin";
+    color: var(--light-yellow-text);
+    padding-top: 2px;
+}
