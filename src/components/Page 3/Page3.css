@@ -1,0 +1,90 @@
+.page3Main {
+    width: 99vw;
+    background-color: var(--darkBrown-bg);
+    height: 140vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: var(--light-bg);
+}
+
+.line {
+    margin-top: 10vh;
+    /* margin-bottom: 8vh; */
+    width: 92vw;
+    height: 1px;
+    background-color: var(--light-grey-text);
+}
+
+.serv1 {
+    width: 92vw;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 25vh;
+    padding-top: 8vh;
+    background-color: var(--darkBrown-bg);
+}
+
+.counter1{
+    font-size: 80px;
+    font-family: "thunder";
+}
+
+.serv1data{
+    width: 55%;
+    display:flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.serv1name{
+    font-size: 5vw;
+    font-family: "thunder";
+}
+
+.serv1desc{
+    font-family: "thunder-thin";
+    color: var(--light-yellow-text);
+    font-size: 25px;
+    width: 50%;
+    line-height: 27px;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    padding-left: 15px;
+}
+.li1{
+    padding-left: 15px;
+}
+.l1,.l2,.l3{
+    display: flex;
+    gap: 30px;
+}
+.subline{
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    width: 100%;
+    height: 1px;
+    background-color: var(--light-grey-text);
+}
+.serv1counter1{
+    font-family: "thunder";
+    font-size: 30px;
+    color: var(--light-grey-text);
+}
+.serv1list1data{
+    font-family: "thunder-light";
+    font-size: 30px;
+}
+
+#serv2{
+    position: absolute;
+    transform: translateY(103vh);
+}
+#serv3{
+    position: absolute;
+    transform: translateY(103vh);
+    padding-bottom: 0;
+}
+.line2,.line3{
+    position: absolute;
+    transform: translateY(103vh);
+}

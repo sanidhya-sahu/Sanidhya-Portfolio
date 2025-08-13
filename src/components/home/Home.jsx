@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import Header from '../header/header'
 import './Home.css'
 import TargetCursor from '../Helpers/TargetCursor/Cursor'
@@ -6,8 +6,44 @@ import SplitText from '../Helpers/SplitText/SplitText'
 import arrowsvg from '../../assets/SVG/arrow.svg'
 import Page2 from '../Page 2/Page2'
 import Page3 from '../Page 3/Page3'
+import Peep from '../../assets/peep-59 1.svg'
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useRef } from 'react'
 function Home() {
-
+    const page2ref = useRef(null)
+    gsap.registerPlugin(ScrollTrigger);
+    useGSAP(() => {
+        
+        gsap.to(".name,.homeBox", {
+            opacity:0,
+            scaleX:0.8,
+            scaleY:0.8,
+            translateY:"200%",
+            scrollTrigger: {
+                trigger: ".HomeMain",
+                scroller: "body",
+                // markers: true,
+                start: "top",
+                end: `top -700`,
+                scrub: true,
+                // pin: true,
+            }
+        })
+        // gsap.to(Page2,{
+        //     translateY:-100,
+        //     scrollTrigger: {
+        //         trigger: ".HomeMain",
+        //         scroller: "body",
+        //         // markers: true,
+        //         start: "top",
+        //         end: `top -100vh`,
+        //         scrub: 2,
+        //         // pin: true,
+        //     }
+        // })
+    })
     return (
         <>
             <div className="HomeMain">
@@ -42,11 +78,18 @@ function Home() {
                             <button className='cursor-target' >Contact</button>
                         </div>
                     </div>
-                    <div className="subBox2"></div>
+                    <div className="subBox2">
+                        <img className='peep cursor-target' style={{
+                            position: "absolute",
+                            right: "17vw",
+                            // top: "51vh",
+                            width: "320px"
+                        }} src={Peep} alt="" />
+                    </div>
                     <div className="subBox3"></div>
                 </div>
             </div>
-            <Page2></Page2>
+            <Page2 ref={page2ref}></Page2>
             <Page3></Page3>
         </>
     )
