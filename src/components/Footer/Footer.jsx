@@ -1,5 +1,5 @@
 import "./Footer.css"
-import fooPeep from "../../assets/SVG/fooPeep.SVG"
+import fooPeep from "../../assets/SVG/fooPeep.svg"
 import Clock from "../Helpers/clock/Clock"
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
