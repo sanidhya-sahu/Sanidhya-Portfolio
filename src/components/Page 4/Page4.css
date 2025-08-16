@@ -1,0 +1,201 @@
+.page4Main {
+    background-color: var(--darkBrown-bg);
+    color: var(--light-bg);
+    width: 100vw;
+}
+
+.page4head {
+    width: 100vw;
+    height: 20vh;
+    font-family: "thunder";
+    color: var(--light-bg);
+    font-size: 11vw;
+    padding-top: 70px;
+    padding-left: 50px;
+}
+
+.page4head>span {
+    font-family: "thunder-i";
+}
+
+.workBody {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row;
+
+}
+
+.workcounter {
+    width: 45%;
+    height: 100vh;
+    padding-left: 50px;
+    /* padding-top: 70px; */
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+}
+
+.workGhost {
+    height: 200px;
+}
+
+.workTiles {
+    width: 53.5%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.workdesc {
+    display: flex;
+    padding-bottom: 50px;
+}
+
+.work {
+    padding-right: 60px;
+    font-size: 18px;
+    font-family: "thunder-thin";
+    color: var(--light-yellow-text);
+    padding-top: 2px;
+    letter-spacing: 1px;
+}
+
+.workPara {
+    width: 40%;
+    font-size: 29px;
+    font-family: "thunder-thin";
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: var(--light-grey-text);
+    padding-right: 140px;
+    line-height: 30px;
+    word-spacing: 10px;
+}
+
+.WorkTile {
+    width: 100%;
+    height: 105vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-bottom: 50px;
+}
+
+.workVid {
+    width: 90%;
+    height: 85%;
+    border-radius: 8px;
+}
+
+.workvidele {
+    width: 90%;
+    height: 50%;
+    object-fit: fill;
+    border-radius: 8px;
+}
+
+.blurlayer {
+    border-radius: 8px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+}
+
+#vid1 {
+    background-image: url("/WorkBG/bg1.webp");
+    background-position: right;
+}
+
+#vid2 {
+    background-image: url("/WorkBG/bg2.jpeg");
+    background-position: right;
+}
+
+#vid3 {
+    background-image: url("/WorkBG/bg3.webp");
+    background-position: right;
+}
+
+#vid4 {
+    background-image: url("/WorkBG/bg4.webp");
+    background-position: right;
+}
+
+#vid5 {
+    background-image: url(/WorkBG/bg5.jpg);
+    background-position: left;
+    width: -webkit-fill-available;
+    width: 90%;
+    height: 78%;
+    border-radius: 8px;
+}
+
+.workDetails {
+    width: 90%;
+    height: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.workDetailBox1 {
+    height: 84%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-evenly; */
+    align-items: flex-start;
+    gap: 15px;
+    padding-top: 15px;
+}
+
+.aboutwork {
+    font-family: "thunder-thin";
+    letter-spacing: 1px;
+    font-weight: bold;
+    color: var(--light-grey-text);
+    font-size: 20px;
+}
+
+.workname {
+    font-family: 'thunder-light';
+    letter-spacing: 1px;
+    font-weight: bold;
+    color: var(--light-yellow-text);
+    font-size: 40px;
+}
+
+.workDetailBox2 {
+    display: flex;
+    gap: 10px;
+    padding-top: 20px;
+}
+
+.subDetail1 {
+    padding: 10px;
+    padding-top: 7px;
+    padding-bottom: 5px;
+    border: 1px solid var(--light-yellow-text);
+    border-radius: 100px;
+    font-family: "thunder-thin";
+    letter-spacing: 1px;
+}
+
+.subDetail2 {
+    padding: 10px;
+    padding-top: 7px;
+    padding-bottom: 5px;
+    border: 1px solid var(--light-yellow-text);
+    border-radius: 100px;
+    background-color: var(--light-yellow-text);
+    color: var(--darkBrown-bg);
+    font-family: "thunder-thin";
+    font-weight: bold;
+    letter-spacing: 1px;
+}

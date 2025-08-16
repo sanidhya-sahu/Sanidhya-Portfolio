@@ -46,8 +46,9 @@
 
 .serv {
     padding-right: 60px;
-    font-size: 20px;
+    font-size: 18px;
     font-family: "thunder-thin";
     color: var(--light-yellow-text);
     padding-top: 2px;
+    letter-spacing: 1px;
 }

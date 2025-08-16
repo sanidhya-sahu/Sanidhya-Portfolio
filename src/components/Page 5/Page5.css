@@ -1,0 +1,62 @@
+.page5Main {
+    width: 99vw;
+    height: 100vh;
+    display: flex;
+    background-color: var(--darkBrown-bg);
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 35px;
+}
+
+.p5box1 {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0px;
+}
+
+.word {
+    font-family: "thunder";
+    font-size: 9vw;
+    color: var(--light-bg);
+    padding-left: 65px;
+}
+
+.p5box2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    gap: 20px;
+}
+
+.skillHead {
+    font-size: 8vw;
+    font-family: "thunder-light";
+    color: var(--light-bg);
+}
+
+.skills {
+    display: flex;
+    font-family: "thunder-light";
+    color: var(--light-bg);
+    font-size: 30px;
+    justify-content: space-around;
+    width: 70%;
+}
+
+.skill {
+    color: var(--light-grey-text);
+    font-family: "thunder-light";
+    font-size: 30px;
+}
+.skill1,.skill2,.skill3{
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+}
+.skill1head,.skill2head,.skill3head{
+    padding-bottom: 10px;
+}

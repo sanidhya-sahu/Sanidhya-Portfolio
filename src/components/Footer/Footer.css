@@ -1,0 +1,113 @@
+.footerMain {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fooHead {
+    width: 100vw;
+    height: 20%;
+    font-size: 10vw;
+    text-align: center;
+    font-family: 'thunder';
+    color: var(--grey-text);
+    padding-top: 75px;
+}
+
+.fooBody {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.email {
+    font-size: 2.5vw;
+    font-family: 'thunder-light';
+    color: var(--light-grey-text);
+    letter-spacing: 1px;
+    padding-top: 50px;
+}
+
+.socials {
+    display: flex;
+    padding-top: 35px;
+    gap: 30px;
+}
+
+.social {
+    width: 105px;
+    height: 35px;
+    text-align: center;
+    border: 3px dashed var(--light-grey-text);
+    border-radius: 50px;
+    font-family: "thunder-thin";
+    letter-spacing: 1px;
+    background-color: var(--light-bg);
+    -webkit-text-stroke: medium;
+    padding-top: 4px;
+    color: var(--light-grey-text);
+    font-size: 15px;
+}
+
+.fooExtras {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30%;
+}
+
+.fooPeep>img {
+    width: 198px;
+}
+
+.location {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 10px;
+    font-size: 15px;
+    font-family: 'thunder-thin';
+    font-weight: 600;
+    color: var(--grey-bg);
+    letter-spacing: 2px;
+    height: 100%;
+    padding-bottom: 30px;
+    position: relative;
+    left: -60px;
+}
+
+.scrollToTop {
+    width: 60px;
+    height: 65px;
+    border: 1px solid var(--light-grey-text);
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--light-grey-text);
+    color: var(--light-bg);
+    font-size: 20px;
+    -webkit-text-stroke-width: medium;
+    padding-bottom: 10px;
+    padding-top: 5px;
+    position: relative;
+    left: -100px;
+}
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.blink {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}

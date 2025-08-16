@@ -2,16 +2,24 @@
 import Header from '../header/header'
 import './Home.css'
 import TargetCursor from '../Helpers/TargetCursor/Cursor'
-import SplitText from '../Helpers/SplitText/SplitText'
 import arrowsvg from '../../assets/SVG/arrow.svg'
 import Page2 from '../Page 2/Page2'
 import Page3 from '../Page 3/Page3'
+import Page4 from '../Page 4/Page4'
+import Page5 from '../Page 5/Page5'
+import Footer from '../Footer/Footer'
 import Peep from '../../assets/peep-59 1.svg'
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef } from 'react'
 function Home() {
+    function scrollToBottom() {
+        window.scrollTo({
+            top: document.documentElement.scrollHeight,
+            behavior: 'smooth' // For smooth scrolling effect
+        });
+    }
     const page2ref = useRef(null)
     gsap.registerPlugin(ScrollTrigger);
     useGSAP(() => {
@@ -75,7 +83,7 @@ function Home() {
                             <span>ABOUT&nbsp;</span> I am a Full Stack Developer based in India, passionate about building scalable, self-hosted solutions.
                         </div>
                         <div className="HomeContact">
-                            <button className='cursor-target' >Contact</button>
+                            <button onClick={()=>scrollToBottom()} className='cursor-target' >Contact</button>
                         </div>
                     </div>
                     <div className="subBox2">
@@ -91,6 +99,9 @@ function Home() {
             </div>
             <Page2 ref={page2ref}></Page2>
             <Page3></Page3>
+            <Page4></Page4>
+            <Page5></Page5>
+            <Footer></Footer>
         </>
     )
 }
