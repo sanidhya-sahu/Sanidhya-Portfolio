@@ -113,7 +113,7 @@ function Page4() {
             <div className="workPara">Thoughtfully crafted digital experiences that blend utility and aesthetics into something functional, memorable, andrefined.</div>
           </div>
           <div className="WorkTile" id="work1">
-            <div onClick={()=>linkRedirect("AIC")} className="workVid cursor-target " id="vid1">
+            <div onClick={()=>linkRedirect("AIC")} className="workVid cursor-target project-target " id="vid1">
               <div className="blurlayer">
                 <video className="workvidele" loop autoPlay muted>
                   <source src="/WorkVids/aiclub.webm" type="video/webm" />
@@ -132,7 +132,7 @@ function Page4() {
             </div>
           </div>
           <div className="WorkTile" id="work2">
-            <div onClick={()=>linkRedirect("HN")} className="workVid cursor-target " id="vid2">
+            <div onClick={()=>linkRedirect("HN")} className="workVid cursor-target project-target " id="vid2">
               <div className="blurlayer">
                 <video className="workvidele" loop autoPlay muted>
                   <source src="/WorkVids/healthnet.webm" type="video/webm" />
@@ -151,7 +151,7 @@ function Page4() {
             </div>
           </div>
           <div className="WorkTile" id="work3">
-            <div onClick={()=>linkRedirect("3P")} className="workVid cursor-target " id="vid3">
+            <div onClick={()=>linkRedirect("3P")} className="workVid cursor-target project-target " id="vid3">
               <div className="blurlayer">
                 <video className="workvidele" loop autoPlay muted>
                   <source src="/WorkVids/3plantes.webm" type="video/webm" />
@@ -170,7 +170,7 @@ function Page4() {
             </div>
           </div>
           <div className="WorkTile" id="work4">
-            <div onClick={()=>linkRedirect("DR")} className="workVid cursor-target " id="vid4">
+            <div onClick={()=>linkRedirect("DR")} className="workVid cursor-target project-target " id="vid4">
               <div className="blurlayer">
                 <video className="workvidele" loop autoPlay muted>
                   <source src="/WorkVids/donatered.webm" type="video/webm" />
@@ -189,7 +189,7 @@ function Page4() {
             </div>
           </div>
           <div className="WorkTile" id="work5">
-            <img onClick={()=>linkRedirect("CJ")} className="cursor-target" id="vid5" src="/WorkIMG/Mockup.png" alt="" srcset="" />
+            <img onClick={()=>linkRedirect("CJ")} className="cursor-target project-target" id="vid5" src="/WorkIMG/Mockup.png" alt="" srcset="" />
             <div className="workDetails">
               <div className="workDetailBox1">
                 <div className="aboutwork">Treasure hunt event platform.</div>

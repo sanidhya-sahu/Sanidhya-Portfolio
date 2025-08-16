@@ -11,6 +11,7 @@ const TargetCursor = ({
   const cornersRef = useRef(null);
   const spinTl = useRef(null);
   const dotRef = useRef(null);
+  const viewTextRef = useRef(null);
   const constants = useMemo(
     () => ({
       borderWidth: 3,
@@ -46,6 +47,7 @@ const TargetCursor = ({
     let currentLeaveHandler = null;
     let isAnimatingToTarget = false;
     let resumeTimeout = null;
+    let isProjectTarget = false;
 
     const cleanupTarget = (target) => {
       if (currentTargetMove) {
@@ -149,10 +151,29 @@ const TargetCursor = ({
 
       activeTarget = target;
 
+      // Check if this is a project target
+      isProjectTarget = target.classList.contains('project-target');
+
       gsap.killTweensOf(cursorRef.current, "rotation");
       spinTl.current?.pause();
 
       gsap.set(cursorRef.current, { rotation: 0 });
+
+      // Animate dot expansion for project targets
+      if (isProjectTarget && dotRef.current && viewTextRef.current) {
+        gsap.to(dotRef.current, {
+          width: "80px",
+          height: "80px",
+          duration: 0.3,
+          ease: "power2.out"
+        });
+        gsap.to(viewTextRef.current, {
+          opacity: 1,
+          duration: 0.2,
+          delay: 0.1,
+          ease: "power2.out"
+        });
+      }
 
       const updateCorners = (mouseX, mouseY) => {
         const rect = target.getBoundingClientRect();
@@ -234,8 +255,25 @@ const TargetCursor = ({
       };
 
       const leaveHandler = () => {
+        // Always reset dot and text, regardless of isProjectTarget state
+        if (dotRef.current && viewTextRef.current) {
+          gsap.killTweensOf([dotRef.current, viewTextRef.current]);
+          gsap.to(dotRef.current, {
+            width: "4px",
+            height: "4px",
+            duration: 0.3,
+            ease: "power2.out"
+          });
+          gsap.to(viewTextRef.current, {
+            opacity: 0,
+            duration: 0.1,
+            ease: "power2.out"
+          });
+        }
+
         activeTarget = null;
         isAnimatingToTarget = false;
+        isProjectTarget = false;
 
         if (cornersRef.current) {
           const corners = Array.from(cornersRef.current);
@@ -305,9 +343,18 @@ const TargetCursor = ({
       window.removeEventListener("mousemove", moveHandler);
       window.removeEventListener("mouseover", enterHandler);
       window.removeEventListener("scroll", scrollHandler);
+      window.removeEventListener("mousedown", mouseDownHandler);
+      window.removeEventListener("mouseup", mouseUpHandler);
 
       if (activeTarget) {
         cleanupTarget(activeTarget);
+      }
+
+      // Force cleanup of dot and text on component unmount
+      if (dotRef.current && viewTextRef.current) {
+        gsap.killTweensOf([dotRef.current, viewTextRef.current]);
+        gsap.set(dotRef.current, { width: "4px", height: "4px" });
+        gsap.set(viewTextRef.current, { opacity: 0 });
       }
 
       console.log("Cleaning up TargetCursor");
@@ -330,7 +377,9 @@ const TargetCursor = ({
 
   return (
     <div ref={cursorRef} className="target-cursor-wrapper">
-      <div ref={dotRef} className="target-cursor-dot" />
+      <div ref={dotRef} className="target-cursor-dot">
+        <span ref={viewTextRef} className="target-cursor-view-text">view</span>
+      </div>
       <div className="target-cursor-corner corner-tl" />
       <div className="target-cursor-corner corner-tr" />
       <div className="target-cursor-corner corner-br" />

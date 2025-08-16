@@ -6,7 +6,6 @@
   height: 0;
   pointer-events: none;
   z-index: 9999;
-  /* mix-blend-mode: difference; */
   transform: translate(-50%, -50%);
 }
 
@@ -16,11 +15,29 @@
   top: 50%;
   width: 4px;
   height: 4px;
-  background: #fff;
+  /* background: #fff; */
   border-radius: 50%;
   transform: translate(-50%, -50%);
   will-change: transform;
-  background: var(--grey-bg);
+  /* background: var(--grey-bg); */
+  background-color: #615c568f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "thunder-light";
+  font-size: 20px;
+  /* mix-blend-mode: difference; */
+}
+
+.target-cursor-view-text {
+  /* font-size: 12px; */
+  font-weight: 500;
+  color: #fff;
+  opacity: 0;
+  pointer-events: none;
+  user-select: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .target-cursor-corner {
