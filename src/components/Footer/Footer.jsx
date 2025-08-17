@@ -60,7 +60,7 @@ function Footer() {
                     <div className="fooPeep cursor-target">
                         <img src={fooPeep} alt="" />
                     </div>
-                    <div className="location">CSM , <Clock></Clock></div>
+                    <div className="location">CSN , <Clock></Clock></div>
                     <div onClick={() => scrollToTop()} className="scrollToTop cursor-target">↑</div>
                 </div>
             </div>
